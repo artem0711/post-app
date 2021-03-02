@@ -4,7 +4,7 @@ import PostList from '../pos-list';
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import PostAddForm from '../post-add-form';
-import PostStatusFilter from '../post-statusf-filter';
+import PostStatusFilter from '../post-status-filter';
 
 export default class App extends React.Component {
     state = {
