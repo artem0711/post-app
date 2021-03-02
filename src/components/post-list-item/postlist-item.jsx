@@ -1,18 +1,10 @@
-import React from "react";
-import { Button } from "reactstrap";
+import React from 'react';
+import { Button } from 'reactstrap';
 
-import "./post-list-item.sass";
-
-const PostListItem = ({ label, onDelete, onToggleImportant, onToggleLiked, important, like }) => {
-    let classNames = "app-list-item d-flex justify-content-between";
-
-    if (important) {
-        classNames += " important";
-    }
-
-    if (like) {
-        classNames += " like";
-    }
+export default function PostListItem({ label, onDelete, onToggleImportant, onToggleLiked, important, like }) {
+    let classNames = 'app-list-item d-flex justify-content-between';
+    classNames += important ? ' important' : '';
+    classNames += like ? ' like' : '';
 
     return (
         <div className={classNames}>
@@ -30,6 +22,4 @@ const PostListItem = ({ label, onDelete, onToggleImportant, onToggleLiked, impor
             </div>
         </div>
     );
-};
-
-export default PostListItem;
+}

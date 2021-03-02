@@ -1,40 +1,37 @@
-import React, { Component } from "react";
-import { Form, Input, Button } from "reactstrap";
+import React from 'react';
+import { Form, Input, Button } from 'reactstrap';
 
-import "./post-add-form.sass";
-
-class PostAddForm extends Component {
-    state = { postText: "" };
+export default class PostAddForm extends React.Component {
+    state = { postText: '' };
 
     onValueChange = (e) => {
         this.setState({
             postText: e.target.value
         });
-    };
+    }
 
     onSubmit = (e) => {
         e.preventDefault();
 
-        if (this.state.postText !== "") {
+        if (this.state.postText !== '') {
             this.props.onAdd(this.state.postText);
-            this.setState({ postText: "" });
+            this.setState({ postText: '' });
         }
-    };
+    }
 
     render() {
+        const { postText } = this.state;
+
         return (
             <Form className="bottom-panel d-flex" onSubmit={this.onSubmit}>
                 <Input
-                    type="text"
                     className="new-post-label"
                     placeholder="О чём Вы думаете сейчас?"
-                    value={this.state.postText}
+                    value={postText}
                     onChange={this.onValueChange}
                 />
-                <Button type="submit" color="secondary" outline>Добавить</Button>
+                <Button color="outline-secondary">Добавить</Button>
             </Form>
         );
-    };
-};
-
-export default PostAddForm;
+    }
+}

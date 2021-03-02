@@ -1,17 +1,15 @@
-import React, { Component } from "react";
-import { Input } from "reactstrap";
+import React from 'react';
+import { Input } from 'reactstrap';
 
-import "./search-panel.sass";
-
-class SearchPanel extends Component {
-    state = { term: "" };
+export default class SearchPanel extends React.Component {
+    state = { term: '' };
 
     onUpdateSearch = (e) => {
         const term = e.target.value;
 
         this.setState({ term });
         this.props.onUpdateSearch(term);
-    };
+    }
 
     render() {
         return (
@@ -21,7 +19,5 @@ class SearchPanel extends Component {
                 onChange={this.onUpdateSearch}
             />
         );
-    };
-};
-
-export default SearchPanel;
+    }
+}
