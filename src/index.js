@@ -8,6 +8,6 @@ import App from './components/app/';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import './index.sass';
+import './sass/index.sass';
 
 ReactDOM.render(<App />, document.getElementById('root'));
