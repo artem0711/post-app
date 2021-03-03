@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PostList from '../pos-list';
+import PostList from '../post-list';
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import PostAddForm from '../post-add-form';
